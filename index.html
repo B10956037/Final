@@ -1,132 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Serif+TC:wght@200&family=Poiret+One&family=Shippori+Mincho&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/389cd2c75d.js" crossorigin="anonymous"></script>
 
     <style>
-        /*navbar*/
+      /*navbar*/
         .nav-link{
-            font-size: 1.27rem;
-      }
-        /*carousel*/
+          font-size: 1.27rem;
+        }
+        @media only screen and (max-width:500px){
+          .nav-img{
+            max-width: 20%;
+            max-height: auto;
+          }
+          .navbar-toggler{
+            max-width: 50%;
+            max-height: auto;
+          }
+        }
+      /*carousel*/
         .carousel-caption{
-            position: absolute;
-            align-items: center;
-            height: 70%;
-            translate:middle;
-      }
+          position: absolute;
+          align-items: center;
+          height: 70%;
+          translate:middle;
+        }
         .carousel-caption-h2{
-            font-size: 270%;
-            font-style:rgb(209, 234, 250);
-      }
-      @media only screen and (max-width:774px) {
-      .carousel-caption-h2{
+          font-size: 270%;
+          color:rgb(218, 242, 250);
+          font-family: 'Shippori Mincho', serif;
+        }
+        @media only screen and (max-width:774px) {
+          .carousel-caption-h2{
             font-size: 110%;
             font-weight: 100;
-      } 
-      }
+          } 
+        }
         .carousel-caption-h3{
-            font-size: 170%;
-            font-style:rgb(209, 234, 250);
-      }
-      @media only screen and (max-width:774px) {
-      .carousel-caption-h3{
+          font-size: 170%;
+          color:rgb(218, 242, 250);
+          font-family: 'Dancing Script', cursive;
+        }
+        @media only screen and (max-width:774px) {
+          .carousel-caption-h3{
             font-size: 110%;
             font-weight: 100;
-      } 
-      }
+          } 
+        }
         .btnMore {
-            background-color: #cc9f9f00;
-            color: #ffffff;
-            border: 2px solid #817b7b;
-      }
+          background-color: #cc9f9f00;
+          color: #ffffff;
+          border: 2px solid #817b7b;
+        }
         .btnMore:hover {
-            background-color: #cc9f9f00;
-            color: rgb(57, 33, 218);
-      }
+          background-color: #cc9f9f00;
+          color: rgb(57, 33, 218);
+        }
       
-      .hide-in-phone{
-        display:inline;
-      }
-      @media only screen and (max-width:1474px) {
-      .hide-in-phone { display: none; } 
-      }
-              /* card */
+        .hide-in-phone{
+          display:inline;
+        }
+        @media only screen and (max-width:1474px) {
+          .hide-in-phone { display: none; } 
+        }
+        @media only screen and (max-width:400px) {
+          .icon{
+            font-size: 50%;
+          }
+        }
+        @media only screen and (max-width:400px) {
+          .switch-btn{
+            display:none;
+          }
+        }
+      /* card */
         .pieces{
-        background-color:rgb(214, 214, 214);
-        max-width:100%;
-        height:auto;
-        display:flex;
-        font-family: 'Noto Serif TC', serif;
+          background-color:rgb(214, 214, 214);
+          max-width:100%;
+          max-height:auto;
+          display:flex;
+          font-family: 'Noto Serif TC', serif;
         }
         .card{
-            border:0em;
-            text-align: center;
-            margin:auto;
+          border:0em;
+          text-align: center;
+          margin:auto;
         }
         .cardh1Pieces{
-            text-align: center;
-            font-size: 5em;
-            font-weight: 77;
-            color:gray;
+          text-align: center;
+          font-size: 5em;
+          font-weight: 77;
+          color:gray;
+        }
+        @media only screen and (max-width:570px){
+          .cardh1Pieces{
+            font-size: 2em;
+          }
         }
         .card-h{
-            font-weight:500;
-            font-size:1.7em;
-            font-family: 'Noto Serif TC', serif;
+          font-weight:500;
+          font-size:1.7em;
+          font-family: 'Noto Serif TC', serif;
         }
         .card-text{
-            font-size:0.7em;
-            font-weight: 20;
+          font-size:0.7em;
+          font-weight: 20;
+        }
+        a{
+          text-decoration:none;
+        }
+        .card-href{
+          color:rgb(0, 0, 0);
+        }
+      /* video*/
+        .video-main {
+          position: relative;
+          background-color: black;
+          height: 75vh;
+          min-height: 25rem;
+          width: 100%;
+          overflow: hidden;
+        }
+
+        .video-main video {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          z-index: 0;
+          -ms-transform: translateX(-50%) translateY(-50%);
+          -moz-transform: translateX(-50%) translateY(-50%);
+          -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+        }
+
+        .video-main .container {
+          position: relative;
+          z-index: 2;
+        }
+        .video-main .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-color: black;
+          opacity: 0.5;
+          z-index: 1;
+        }
+
+        .more-videos{
+          color:rgb(255, 255, 255);
+          font-family: 'Poiret One', cursive;
+          font-weight: 200;
         }
     </style>
     <title>測試</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <!-- navbar-->
-        <nav class="navbar navbar-expand-lg navbar navbar-light"  style="background-color: #f8b9b4;">
-            <div class="container-fluid">
-              <a class="navbar-brand mr-auto" href="#"><img src="https://upload.cc/i1/2021/06/08/9NrdwJ.jpg" alt="" width="47%" height="27%"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto align-content-end flex-wrap">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">NEWS</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">TOUR</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">MUSIC</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">ABOUT</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">SHOP</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        <!-- /navbar-->
+      <!-- navbar-->
+      <nav class="navbar navbar-expand-lg navbar navbar-light"  style="background-color: #f8b9b4;">
+        <div class="container-fluid">
+
+          <a class="navbar-brand mr-auto" href="#home"><img src="https://upload.cc/i1/2021/06/08/9NrdwJ.jpg" alt="home" width="47%"height="27%" class="nav-img"></a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto align-content-end flex-wrap">
+              <li class="nav-item">
+                <a class="nav-link" href="https://blow.streetvoice.com/?s=%E7%94%9C%E7%B4%84%E7%BF%B0" target="_blank">NEWS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://streetvoice.com/venue/activities/all/0/?q=%E7%94%9C%E7%B4%84%E7%BF%B0%20Sweet%20John" target="_blank">TOUR</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://rock-mobile.lnk.to/SweetJohn" target="_blank" >MUSIC</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://blow.streetvoice.com/37840/" target="_blank"">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://shopee.tw/sweetjohnband" target="_blank">SHOP</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- /navbar-->
     </header>
     <article>
-        <!-- carousel-->
+      <!-- carousel-->
         <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5777" data-bs-pause="hover">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active switch-btn" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class="switch-btn"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class="switch-btn"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4" class="switch-btn"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -134,7 +217,6 @@
               <div class="carousel-caption">
                 <h2 class="carousel-caption-h2">甜約翰</h2>
                 <h3 class="carousel-caption-h3">SweetJohn</h3>
-                <!-- !!!-->
                 <p>
                   <button class="btn btn-primary btnMore hide-in-phone" type="button" data-bs-toggle="collapse" data-bs-target="#more" aria-expanded="false" aria-controls="collapseExample">
                     了解更多
@@ -149,8 +231,13 @@
                       團名的 Sweet John 源自於專與情人、伴侶道別的「Dear John Letter」，甜約翰擅長以輕快小品式的旋律，內斂且溫柔的呢喃出首首獨白。揉和多種器樂聲響以及風格元素，延續 Natural Outcome 的五人編制以及對於律動的完美掌握，編織出屬於甜約翰式的小品慵懶，獻給每位聽者心中，如此美好卻只能揮手告別的 Sweet John。<br>
                   </div>
                 </div>
-                <!-- !!!-->
-
+                <div>
+                    <h3  class="about-icon">
+                      <a href="https://www.facebook.com/sweetjohnband" target="_blank"><i class="fab fa-facebook mx-2 icon"  style="color:rgb(92, 156, 252)"></i></a>
+                      <a href="https://www.instagram.com/sweetjohnofficial/" target="_blank"><i class="fab fa-instagram mx-2 icon" style="color:rgb(255, 126, 180)"></i></a>
+                      <a href="https://twitter.com/sweetjohnband" target="_blank"><i class="fab fa-twitter-square mx-2 icon" style="color:rgb(126, 197, 255)"></i></a>
+                    </h3>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
@@ -158,7 +245,6 @@
               <div class="carousel-caption">
                 <h2 class="carousel-caption-h2">甜約翰</h2>
                 <h3 class="carousel-caption-h3">SweetJohn</h3>
-                <!-- !!!-->
                 <p>
                   <button class="btn btn-primary btnMore hide-in-phone" type="button" data-bs-toggle="collapse" data-bs-target="#more" aria-expanded="false" aria-controls="collapseExample">
                     了解更多
@@ -173,9 +259,16 @@
                       團名的 Sweet John 源自於專與情人、伴侶道別的「Dear John Letter」，甜約翰擅長以輕快小品式的旋律，內斂且溫柔的呢喃出首首獨白。揉和多種器樂聲響以及風格元素，延續 Natural Outcome 的五人編制以及對於律動的完美掌握，編織出屬於甜約翰式的小品慵懶，獻給每位聽者心中，如此美好卻只能揮手告別的 Sweet John。<br>
                   </div>
                 </div>
-                <!-- !!!-->
+                <div>
+                  <h3  class="about-icon">
+                    <a href="https://www.facebook.com/sweetjohnband" target="_blank"><i class="fab fa-facebook mx-2 icon"  style="color:rgb(92, 156, 252)"></i></a>
+                    <a href="https://www.instagram.com/sweetjohnofficial/" target="_blank"><i class="fab fa-instagram mx-2 icon" style="color:rgb(255, 126, 180)"></i></a>
+                    <a href="https://twitter.com/sweetjohnband" target="_blank"><i class="fab fa-twitter-square mx-2 icon" style="color:rgb(126, 197, 255)"></i></a>
+                  </h3>
+                </div>
               </div>
             </div>
+
             <div class="carousel-item">
               <img src="https://upload.cc/i1/2021/06/09/8hGNiR.jpg" class="d-block w-100" alt="...">
               <div class="carousel-caption">
@@ -196,7 +289,13 @@
                       團名的 Sweet John 源自於專與情人、伴侶道別的「Dear John Letter」，甜約翰擅長以輕快小品式的旋律，內斂且溫柔的呢喃出首首獨白。揉和多種器樂聲響以及風格元素，延續 Natural Outcome 的五人編制以及對於律動的完美掌握，編織出屬於甜約翰式的小品慵懶，獻給每位聽者心中，如此美好卻只能揮手告別的 Sweet John。<br>
                   </div>
                 </div>
-                <!-- !!!-->
+                <div>
+                  <h3  class="about-icon">
+                    <a href="https://www.facebook.com/sweetjohnband" target="_blank"><i class="fab fa-facebook mx-2 icon"  style="color:rgb(92, 156, 252)"></i></a>
+                    <a href="https://www.instagram.com/sweetjohnofficial/" target="_blank"><i class="fab fa-instagram mx-2 icon" style="color:rgb(255, 126, 180)"></i></a>
+                    <a href="https://twitter.com/sweetjohnband" target="_blank"><i class="fab fa-twitter-square mx-2 icon" style="color:rgb(126, 197, 255)"></i></a>
+                  </h3>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
@@ -204,7 +303,6 @@
               <div class="carousel-caption">
                 <h2 class="carousel-caption-h2">甜約翰</h2>
                 <h3 class="carousel-caption-h3">SweetJohn</h3>
-                <!-- !!!-->
                 <p>
                   <button class="btn btn-primary btnMore hide-in-phone" type="button" data-bs-toggle="collapse" data-bs-target="#more" aria-expanded="false" aria-controls="collapseExample">
                     了解更多
@@ -219,77 +317,114 @@
                       團名的 Sweet John 源自於專與情人、伴侶道別的「Dear John Letter」，甜約翰擅長以輕快小品式的旋律，內斂且溫柔的呢喃出首首獨白。揉和多種器樂聲響以及風格元素，延續 Natural Outcome 的五人編制以及對於律動的完美掌握，編織出屬於甜約翰式的小品慵懶，獻給每位聽者心中，如此美好卻只能揮手告別的 Sweet John。<br>
                   </div>
                 </div>
-                <!-- !!!-->
+                <div>
+                  <h3  class="about-icon">
+                    <a href="https://www.facebook.com/sweetjohnband" target="_blank"><i class="fab fa-facebook mx-2 icon"  style="color:rgb(92, 156, 252)"></i></a>
+                    <a href="https://www.instagram.com/sweetjohnofficial/" target="_blank"><i class="fab fa-instagram mx-2 icon" style="color:rgb(255, 126, 180)"></i></a>
+                    <a href="https://twitter.com/sweetjohnband" target="_blank"><i class="fab fa-twitter-square mx-2 icon" style="color:rgb(126, 197, 255)"></i></a>
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- /carousel-->
-        <!-- card-->
-          <div class="pieces container">
-            <div class="row">
-                <div><br><br></div>
-                <h2 class="cardh1Pieces">pieces</h1>
-                <div><br><br></div>
-                <div>
-                    <h1>&nbsp</h1>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card" style="width: 14rem;" align="center">
-                        <img src="https://upload.cc/i1/2021/06/09/5wzDVc.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                        <br>
-                        <h2 class="card-h">走</h2>
-                        <br>
-                        <h2 class="card-text">2018-Single</h2>
-                        <br>
-                        </div>
-                    </div>
-                    <div class="invisible"><h1>hideeeeeeeeeee</h1></div>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card" style="width: 14rem;">
-                    <img src="https://upload.cc/i1/2021/06/09/H9ms3d.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <br>
-                        <h2 class="card-h">Dear</h2>
-                        <br>
-                        <h2 class="card-text">2017-Album</h2>
-                        <br>
-                    </div>
-                    </div>
-                    <div class="invisible"><h1>hideeeeeeeeeee</h1></h1></div>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card" style="width: 14rem;">
-                    <img src="https://upload.cc/i1/2021/06/09/sOarox.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <br>
-                        <h2 class="card-h">城市小說選集</h2>
-                        <br>
-                        <h2 class="card-text">2019-Album</h2>
-                        <br>
-                    </div>
-                    </div>
-                    <div class="invisible"><h1>hideeeeeeeeeee</h1></div>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <div class="card" style="width: 14rem;">
-                    <img src="https://upload.cc/i1/2021/06/09/Ojv94P.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <br>
-                        <h2 class="card-h">留給你的我從未</h2>
-                        <br>
-                        <h2 class="card-text">2020-Single</h2>
-                        <br>
-                    </div>
-                    </div>
-                </div>
-            </div>
+      <!-- /carousel-->
+      <!-- card-->
+        <div class="pieces container">
+          <div class="row">
+            <div><br><br></div>
+            <h2 class="cardh1Pieces">pieces</h1>
+            <div><br><br></div>
+            <div>
+              <h1>&nbsp</h1>
           </div>
-        <!-- /card-->
+            <div class="col-12 col-sm-6 col-xl-3">
+              <a href="https://www.youtube.com/watch?v=fwLlyFJUfYU" target="_blank" class="card-href">
+                <div class="card shadow-lg" style="max-width: 14rem;" align="center">
+                  <img src="https://upload.cc/i1/2021/06/09/5wzDVc.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <br>
+                    <h2 class="card-h">走</h2>
+                    <br>
+                    <h2 class="card-text">2018-Single</h2>
+                    <br>
+                  </div>
+                  </a>
+                </div>
+                  <div class="invisible"><h1>hideeeeeeeeeee</h1></div>
+          </div>
+              <div class="col-12 col-sm-6 col-xl-3">
+                <a href="https://open.spotify.com/album/6HQ5lvLYVlXyJEl9knI9Eh?si=xKzewsiIRr6I2WI81FBqEg&dl_branch=1" target="_blank" class="card-href">
+                  <div class="card shadow-lg" style="max-width: 14rem;">
+                  <img src="https://upload.cc/i1/2021/06/09/H9ms3d.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <br>
+                      <h2 class="card-h">Dear</h2>
+                      <br>
+                      <h2 class="card-text">2017-Album</h2>
+                      <br>
+                  </div>
+                  </div>
+                  <div class="invisible"><h1>hideeeeeeeeeee</h1></h1></div>
+                  </a>
+              </div>
+              <div class="col-12 col-sm-6 col-xl-3">
+                <a href="https://open.spotify.com/album/1MYKQYpHeS8cTr8vxSfqSE?si=PmKYxuPuQXWFRHfGLV9w1g&dl_branch=1" target="_blank" class="card-href">
+                  <div class="card shadow-lg" style="max-width: 14rem;">
+                  <img src="https://upload.cc/i1/2021/06/09/sOarox.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <br>
+                      <h2 class="card-h">城市小說選集</h2>
+                      <br>
+                      <h2 class="card-text">2019-Album</h2>
+                      <br>
+                  </div>
+                  </div>
+                  <div class="invisible"><h1>hideeeeeeeeeee</h1></div>
+                  </a>
+              </div>
+              <div class="col-12 col-sm-6 col-xl-3">
+                <a href="https://youtu.be/dWOmdvMzE68" target="_blank" class="card-href">
+                  <div class="card shadow-lg" style="max-width: 14rem;">
+                  <img src="https://upload.cc/i1/2021/06/09/Ojv94P.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                      <br>
+                      <h2 class="card-h">留給你的我從未</h2>
+                      <br>
+                      <h2 class="card-text">2020-Single</h2>
+                      <br>
+                  </div>
+                  </div>
+                  </a>
+              </div>
+          </div>
+        </div>
+      <!-- /card-->
+      <!-- video-->
+      <div class="video-main">
+        <div class="overlay"></div>
+          <video autoplay="autoplay" muted="muted" loop="loop">
+          <source src="/sweetJohnvideo.mp4" type="video/mp4">
+          </video>
+        <div class="overlay d-flex p-2 justify-content-end video-text">
+          <div class="flex-column-reverse">
+            <div class="d-flex flex-row-reverse">
+            </div>
+              <div class="row"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+              <div class="row"><br><br></div>
+              <div class="d-flex flex-row-reverse">
+                  <div class="row invisible">hideeeeeeeeeeeeeeeeeeeeeeeeeee</div>
+                  <div class=video-text>
+                      <h2 class="more-videos">" Sweet John - Until You "  /<a href="https://www.youtube.com/c/SweetJohn%E7%94%9C%E7%B4%84%E7%BF%B0/videos" target="_blank" style="color:rgb(223, 229, 255);"> more videos ⇀</a></h2>
+                  </div>
+              </div>
+              <div class="row"><br><br><br></div>
+          </div>
+        </div>
+        </div>
+      <!--/video-->
     </article>
-</body>
+  </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </html>
