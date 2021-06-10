@@ -37,28 +37,28 @@
           color:rgb(255, 236, 236);
           font-family: 'Shippori Mincho', serif;
         }
-        .carousel-caption-h2.carousel-caption-h2-first{
-          color:rgb(48, 48, 48);
-        }
-        @media only screen and (max-width:774px) {
+        @media only screen and (max-width:757px) {
           .carousel-caption-h2{
             font-size: 110%;
             font-weight: 100;
-          } 
+          }
+          .carousel-caption-h2.carousel-caption-h2-first{
+          color:rgb(48, 48, 48);
+        }
         }
         .carousel-caption-h3{
           font-size: 170%;
           color:rgb(255, 236, 236);
           font-family: 'Dancing Script', cursive;
         }
-        .carousel-caption-h3.carousel-caption-h3-first{
-          color:rgb(48, 48, 48);
-        }
-        @media only screen and (max-width:774px) {
+        @media only screen and (max-width:757px) {
           .carousel-caption-h3{
             font-size: 110%;
             font-weight: 100;
-          } 
+          }
+          .carousel-caption-h3.carousel-caption-h3-first{
+          color:rgb(48, 48, 48);
+        }
         }
         .btnMore {
           background-color: #cc9f9f00;
@@ -87,6 +87,18 @@
         .carousel-img{
           max-width: 100%;
           max-height: auto;
+        }
+      /* phone more*/
+        .phone-more{
+              display:none;
+            }
+        @media only screen and (max-width:500px){
+          .phone-more{
+            display:block;
+          }
+        }
+        .phone-more-style{
+          background: rgb(255, 246, 246);
         }
       /* card */
         .pieces{
@@ -180,17 +192,17 @@
   <body>
     <header>
       <!-- navbar-->
-      <nav class="navbar navbar-expand-lg navbar navbar-light"  style="background-color: #f8b9b4;">
+      <nav class="navbar navbar-expand-lg navbar navbar-light navbar-fixed-top"  style="background-color: #f8b9b4; width: 100%;">
         <div class="container-fluid">
 
           <a class="navbar-brand mr-auto" href="#home"><img src="https://upload.cc/i1/2021/06/08/9NrdwJ.jpg" alt="home" width="47%"height="27%" class="nav-img"></a>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
               <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto align-content-end flex-wrap">
+            <ul class="navbar-nav align-content-end flex-wrap">
               <li class="nav-item">
                 <a class="nav-link" href="https://blow.streetvoice.com/?s=%E7%94%9C%E7%B4%84%E7%BF%B0" target="_blank">NEWS</a>
               </li>
@@ -224,9 +236,8 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <picture>
-                <source srcset="https://upload.cc/i1/2021/06/09/DHnpmg.jpg" media="(min-width: 992px)">
-                <source srcset="https://upload.cc/i1/2021/06/09/DHnpmg.jpg" media="(min-width: 768px)">
-                <source srcset="https://upload.cc/i1/2021/06/10/RLQTYJ.jpg" media="(max-width: 576px)">
+                <source srcset="https://upload.cc/i1/2021/06/09/DHnpmg.jpg" media="(min-width: 758px)">
+                <source srcset="https://upload.cc/i1/2021/06/10/RLQTYJ.jpg" media="(max-width: 757px)">
                 <img class="carousel-img">
               </picture>
               <div class="carousel-caption">
@@ -257,14 +268,13 @@
             </div>
             <div class="carousel-item">
               <picture>
-                <source srcset="https://upload.cc/i1/2021/06/09/qyXu92.jpg" media="(min-width: 992px)">
-                <source srcset="https://upload.cc/i1/2021/06/09/qyXu92.jpg" media="(min-width: 768px)">
-                <source srcset="https://upload.cc/i1/2021/06/10/kXxiOc.jpg" media="(max-width: 576px)">
+                <source srcset="https://upload.cc/i1/2021/06/09/qyXu92.jpg" media="(min-width: 758px)">
+                <source srcset="https://upload.cc/i1/2021/06/10/kXxiOc.jpg" media="(max-width: 757px)">
                 <img class="carousel-img">
               </picture>
               <div class="carousel-caption">
                 <h2 class="carousel-caption-h2 carousel-caption-h2-first">甜約翰</h2>
-                <h3 class="carousel-caption-h3">&nbsp;</h3>
+                <h3 class="carousel-caption-h3">SweetJohn</h3>
                 <p>
                   <button class="btn btn-primary btnMore hide-in-phone" type="button" data-bs-toggle="collapse" data-bs-target="#more" aria-expanded="false" aria-controls="collapseExample">
                     了解更多
@@ -291,9 +301,8 @@
 
             <div class="carousel-item">
               <picture>
-                <source srcset="https://upload.cc/i1/2021/06/09/8hGNiR.jpg" media="(min-width: 992px)">
-                <source srcset="https://upload.cc/i1/2021/06/09/8hGNiR.jpg" media="(min-width: 768px)">
-                <source srcset="https://upload.cc/i1/2021/06/10/7r86Vx.jpg" media="(max-width: 576px)">
+                <source srcset="https://upload.cc/i1/2021/06/09/8hGNiR.jpg" media="(min-width: 758px)">
+                <source srcset="https://upload.cc/i1/2021/06/10/7r86Vx.jpg" media="(max-width: 757px)">
                 <img class="carousel-img">
               </picture>
               <div class="carousel-caption">
@@ -325,9 +334,8 @@
             </div>
             <div class="carousel-item">
               <picture>
-                <source srcset="https://upload.cc/i1/2021/06/09/DKBSd4.jpg" media="(min-width: 992px)">
-                <source srcset="https://upload.cc/i1/2021/06/09/DKBSd4.jpg" media="(min-width: 768px)">
-                <source srcset="https://upload.cc/i1/2021/06/10/YP1IRj.jpg" media="(max-width: 576px)">
+                <source srcset="https://upload.cc/i1/2021/06/09/DKBSd4.jpg" media="(min-width: 758px)">
+                <source srcset="https://upload.cc/i1/2021/06/10/YP1IRj.jpg" media="(max-width: 757px)">
                 <img class="carousel-img">
               </picture>
               <div class="carousel-caption">
@@ -359,6 +367,21 @@
           </div>
         </div>
       <!-- /carousel-->
+      <!-- phone more -->
+        <div class="phone-more">
+          <div class="phone-more-style">
+            <p>
+              <br>『謝謝妳/你，在我們最美麗的年華，讓我們相遇， 就讓遺憾與美好藏在旋律裡。』
+              <br>
+              <br>
+              甜約翰前身為成立於 2011 年，來自台南的 Natural Outcome 自然發聲樂團，主唱浚瑋、吉他手罐頭、貝斯手阿獎以及鼓手小 J 相遇於成大，成團後經歷進入社會的焦慮以及討生活的矛盾，沈潛兩年後在 2016 的一個雨天裡遇見Mandark，從此開啟甜約翰的嶄新篇章。
+              <br>
+              <br>
+              團名的 Sweet John 源自於專與情人、伴侶道別的「Dear John Letter」，甜約翰擅長以輕快小品式的旋律，內斂且溫柔的呢喃出首首獨白。揉和多種器樂聲響以及風格元素，延續 Natural Outcome 的五人編制以及對於律動的完美掌握，編織出屬於甜約翰式的小品慵懶，獻給每位聽者心中，如此美好卻只能揮手告別的 Sweet John。
+              <br>
+            </p>
+          </div>
+        </div>
       <!-- card-->
         <div class="pieces container">
           <div class="row">
