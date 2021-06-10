@@ -34,8 +34,11 @@
         }
         .carousel-caption-h2{
           font-size: 270%;
-          color:rgb(218, 242, 250);
+          color:rgb(255, 236, 236);
           font-family: 'Shippori Mincho', serif;
+        }
+        .carousel-caption-h2.carousel-caption-h2-first{
+          color:rgb(48, 48, 48);
         }
         @media only screen and (max-width:774px) {
           .carousel-caption-h2{
@@ -45,8 +48,11 @@
         }
         .carousel-caption-h3{
           font-size: 170%;
-          color:rgb(218, 242, 250);
+          color:rgb(255, 236, 236);
           font-family: 'Dancing Script', cursive;
+        }
+        .carousel-caption-h3.carousel-caption-h3-first{
+          color:rgb(48, 48, 48);
         }
         @media only screen and (max-width:774px) {
           .carousel-caption-h3{
@@ -74,11 +80,13 @@
           .icon{
             font-size: 50%;
           }
-        }
-        @media only screen and (max-width:400px) {
           .switch-btn{
             display:none;
           }
+        }
+        .carousel-img{
+          max-width: 100%;
+          max-height: auto;
         }
       /* card */
         .pieces{
@@ -215,10 +223,15 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="https://upload.cc/i1/2021/06/09/DHnpmg.jpg" class="d-block w-100" alt="...">
+              <picture>
+                <source srcset="https://upload.cc/i1/2021/06/09/DHnpmg.jpg" media="(min-width: 992px)">
+                <source srcset="https://upload.cc/i1/2021/06/09/DHnpmg.jpg" media="(min-width: 768px)">
+                <source srcset="https://upload.cc/i1/2021/06/10/RLQTYJ.jpg" media="(max-width: 576px)">
+                <img class="carousel-img">
+              </picture>
               <div class="carousel-caption">
-                <h2 class="carousel-caption-h2">甜約翰</h2>
-                <h3 class="carousel-caption-h3">SweetJohn</h3>
+                <h2 class="carousel-caption-h2 carousel-caption-h2-first">甜約翰</h2>
+                <h3 class="carousel-caption-h3 carousel-caption-h3-first">SweetJohn</h3>
                 <p>
                   <button class="btn btn-primary btnMore hide-in-phone" type="button" data-bs-toggle="collapse" data-bs-target="#more" aria-expanded="false" aria-controls="collapseExample">
                     了解更多
@@ -243,10 +256,15 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="https://upload.cc/i1/2021/06/09/qyXu92.jpg" class="d-block w-100" alt="...">
+              <picture>
+                <source srcset="https://upload.cc/i1/2021/06/09/qyXu92.jpg" media="(min-width: 992px)">
+                <source srcset="https://upload.cc/i1/2021/06/09/qyXu92.jpg" media="(min-width: 768px)">
+                <source srcset="https://upload.cc/i1/2021/06/10/kXxiOc.jpg" media="(max-width: 576px)">
+                <img class="carousel-img">
+              </picture>
               <div class="carousel-caption">
-                <h2 class="carousel-caption-h2">甜約翰</h2>
-                <h3 class="carousel-caption-h3">SweetJohn</h3>
+                <h2 class="carousel-caption-h2 carousel-caption-h2-first">甜約翰</h2>
+                <h3 class="carousel-caption-h3">&nbsp;</h3>
                 <p>
                   <button class="btn btn-primary btnMore hide-in-phone" type="button" data-bs-toggle="collapse" data-bs-target="#more" aria-expanded="false" aria-controls="collapseExample">
                     了解更多
@@ -272,7 +290,12 @@
             </div>
 
             <div class="carousel-item">
-              <img src="https://upload.cc/i1/2021/06/09/8hGNiR.jpg" class="d-block w-100" alt="...">
+              <picture>
+                <source srcset="https://upload.cc/i1/2021/06/09/8hGNiR.jpg" media="(min-width: 992px)">
+                <source srcset="https://upload.cc/i1/2021/06/09/8hGNiR.jpg" media="(min-width: 768px)">
+                <source srcset="https://upload.cc/i1/2021/06/10/7r86Vx.jpg" media="(max-width: 576px)">
+                <img class="carousel-img">
+              </picture>
               <div class="carousel-caption">
                 <h2 class="carousel-caption-h2">甜約翰</h2>
                 <h3 class="carousel-caption-h3">SweetJohn</h3>
@@ -301,7 +324,12 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="https://upload.cc/i1/2021/06/09/DKBSd4.jpg" class="d-block w-100" alt="...">
+              <picture>
+                <source srcset="https://upload.cc/i1/2021/06/09/DKBSd4.jpg" media="(min-width: 992px)">
+                <source srcset="https://upload.cc/i1/2021/06/09/DKBSd4.jpg" media="(min-width: 768px)">
+                <source srcset="https://upload.cc/i1/2021/06/10/YP1IRj.jpg" media="(max-width: 576px)">
+                <img class="carousel-img">
+              </picture>
               <div class="carousel-caption">
                 <h2 class="carousel-caption-h2">甜約翰</h2>
                 <h3 class="carousel-caption-h3">SweetJohn</h3>
